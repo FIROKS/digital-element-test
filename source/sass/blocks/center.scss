@@ -1,0 +1,39 @@
+.center {
+  @include center;
+
+  &--relative {
+    position: relative;
+  }
+
+  &--small {
+    max-width: 970px;
+    padding: 0 15px;
+  }
+
+  &--feature {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 15px 0 7%;
+  }
+}
+
+@include tablet {
+  .center {
+    &--small {
+      padding: 0 $tablet-padding;
+    }
+
+    &--feature {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@include mobile {
+  .center {
+    &--small {
+      padding: 0 $mobile-padding;
+    }
+  }
+}

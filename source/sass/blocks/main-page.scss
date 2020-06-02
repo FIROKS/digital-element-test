@@ -1,0 +1,28 @@
+.main-page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  h2,
+  b {
+    margin: 0;
+    padding: 0;
+    font-family: $gilroy;
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+  }
+}
+
+@include mobile {
+  .main-page {
+    h2,
+    b {
+      font-size: 27px;
+      line-height: 39px;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@mixin tablet {
+  @media (max-width: $desktop-width - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet-width - 1px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+}
+
+@mixin center {
+  max-width: $center-width;
+  margin: 0 auto;
+  padding: 0 $desktop-padding;
+
+  @media (max-width: $desktop-width - 1px) {
+    min-width: $tablet-width;
+    padding: 0 $tablet-padding;
+  }
+
+  @media (max-width: $tablet-width - 1px) {
+    min-width: $mobile-width;
+    padding: 0 $mobile-padding;
+  }
+}
+
+@mixin underline-hover($height: 1px) {
+  background: linear-gradient(currentColor, currentColor) no-repeat;
+  background-position: 0% 100%;
+  background-size: 0 $height;
+  transition: background-size 0.3s;
+
+  &:hover,
+  &:focus {
+    background-size: 100% $height;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

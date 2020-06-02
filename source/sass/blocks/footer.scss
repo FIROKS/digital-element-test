@@ -1,0 +1,288 @@
+.footer {
+  position: relative;
+  margin-right: 7%;
+  padding-top: 91px;
+  padding-bottom: 64px;
+  color: #ffffff;
+  background-color: $dark-blue;
+  border-radius: 0px 200px 0px 0px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 108%;
+    height: 110%;
+    background-color: $light-blue;
+    z-index: -1;
+  }
+
+  &__top-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 31px 100px 48px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 31px;
+      width: 200%;
+      height: 1px;
+      background-color: #ffffff;
+      opacity: 0.4;
+    }
+
+    b {
+      display: block;
+      width: 75%;
+      margin-bottom: 31px;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__top-left {
+    width: 55%;
+  }
+
+  &__top-right {
+    margin-left: auto;
+  }
+
+  &__bottom-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 96px 14.7% 64px 5.2%;
+  }
+
+  &__logo-container {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+  }
+
+  &__column {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &--left {
+      width: 37%;
+      margin-right: 16%;
+      padding-right: 10px;
+    }
+
+    &--center {
+      width: 25%;
+      padding-right: 10px;
+    }
+
+    &--right {
+      width: 15%;
+      margin-left: auto;
+    }
+
+    &--center,
+    &--right {
+      p {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 32px;
+        padding: 0;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__adress,
+  &__tel,
+  &__mail {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 22px;
+
+    &::before {
+      content: "A.";
+      margin-right: 20px;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+    }
+  }
+
+  &__adress {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__tel {
+    @include underline-hover;
+    color: #ffffff;
+
+    &::before {
+      content: "T.";
+    }
+  }
+
+  &__mail {
+    @include underline-hover;
+    margin-bottom: 0;
+    color: #ffffff;
+
+    &::before {
+      content: "E.";
+    }
+  }
+
+  &__about-list,
+  &__social-list {
+    @include list-reset;
+    width: 100%;
+  }
+
+  &__about-item,
+  &__social-item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__about-link,
+  &__social-link {
+    color: #ffffff;
+    @include underline-hover;
+  }
+
+  &__copyright {
+    opacity: 0.4;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@include tablet {
+  .footer {
+    border-radius: 0 100px  0 0;
+    margin-right: 4%;
+    padding-bottom: 35px;
+
+    &__top-line {
+      flex-wrap: wrap;
+      padding-bottom: 65px;
+
+      &::after {
+        right: 7.5%;
+        left: 7.5%;
+        width: auto;
+      }
+
+      b {
+        width: 100%;
+      }
+    }
+
+    &__top-left {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    &__top-right {
+      margin: 0 auto;
+    }
+
+    &__bottom-line {
+      padding: 65px 8.7% 40px 5.2%;
+    }
+
+    &__column--left {
+      width: 40%;
+      margin-right: 8%;
+    }
+
+    &__column--center {
+      width: 25%;
+    }
+
+    &__column--right {
+      width: 18%;
+      padding-right: 5px;
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    margin-right: 0%;
+    padding-top: 30px;
+    border-radius: 0 80px 0 0;
+
+    b {
+      display: block;
+      margin-bottom: 27px;
+    }
+
+    &__top-line {
+      padding: 0 15px 50px 15px;
+    }
+
+    &__top-right {
+      width: 100%;
+    }
+
+    &__bottom-line {
+      flex-wrap: wrap;
+      padding-top: 35px;
+      padding-right: 5.2%;
+    }
+
+    &__column--left {
+      width: 100%;
+      margin-bottom: 25px;
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    &__column--center {
+      width: 50%;
+      padding-right: 10px;
+    }
+
+    &__column--right {
+      width: 50%;
+      padding-right: 0;
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    &__logo-container {
+      align-self: center;
+    }
+
+    &__adress,
+    &__tel,
+    &__mail {
+      margin-bottom: 10px;
+    }
+
+  }
+}

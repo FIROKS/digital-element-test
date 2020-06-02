@@ -1,0 +1,151 @@
+.clients {
+  padding-top: 96px;
+  padding-bottom: 125px;
+  background-color: $light-blue;
+  border-radius: 200px 0 0 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 110px;
+
+    h2 {
+      width: 30%;
+      margin-right: 4.1%;
+      flex-shrink: 0;
+    }
+
+    p {
+      width: 57%;
+      margin: 0;
+      margin-top: -16px;
+      padding: 0;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 128px;
+    padding: 10px;
+    border-right: 1px solid #ffffff;
+
+    &:nth-child(n + 5) {
+      border-top: 1px solid #ffffff;
+    }
+
+    &:nth-child(4n) {
+      border-right: none;
+    }
+
+    &:last-child {
+      background-color: rgba($blue, 0.2);
+
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: $gilroy;
+      font-size: 20px;
+      line-height: 46px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+
+  &__link {
+    @include underline-hover;
+    font-family: $gilroy;
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+}
+
+@include tablet {
+  .clients {
+    padding-top: 45px;
+    padding-left: 0;
+    padding-bottom: 60px;
+    border-radius: 100px 0 0 0;
+
+    h2 {
+      width: 270px;
+      margin-bottom: 30px;
+    }
+
+    &__container {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 0;
+      padding-bottom: 50px;
+
+      p {
+        width: 80%;
+        margin-top: 0;
+      }
+    }
+
+    &__item {
+      height: 120px;
+
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .clients {
+    border-radius: 80px 0 0 0;
+
+    h2 {
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+
+    &__container {
+      align-items: center;
+    }
+
+    &__list {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    &__item {
+      width: 50%;
+      max-width: 250px;
+      border: none;
+      border-top: 1px solid #ffffff;
+
+      &:nth-child(4n) {
+        border-right: none;
+      }
+
+      &:nth-child(2n + 1) {
+        border-right: 1px solid #ffffff;
+      }
+    }
+  }
+}
