@@ -28,7 +28,7 @@
       }
     });
 
-    xhr.open('POST', 'http://rest.learncode.academy/api/afrianska/form', true);
+    xhr.open('POST', 'https://rest.learncode.academy/api/afrianska/form', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
 
     xhr.send(JSON.stringify({
