@@ -128,10 +128,12 @@
 
   }
 
-  &__success {
+  &__success,
+  &__error {
     display: none;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     padding: 55px 56px 59px;
     background-color: #ffffff;
@@ -141,15 +143,25 @@
     opacity: 0;
 
     p {
+      width: 100%;
       margin: 0;
       padding: 0;
       font-family: $gilroy;
       font-size: 20px;
       line-height: 30px;
       font-weight: 600;
+      text-align: center;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: $lightest-blue;
+
+      &:last-child {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 600;
+        margin-top: 20px;
+        color: #1f3f68;
+      }
     }
   }
 
