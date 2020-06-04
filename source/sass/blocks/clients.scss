@@ -38,7 +38,7 @@
     align-items: center;
     justify-content: center;
     width: 25%;
-    height: 128px;
+    min-height: 128px;
     padding: 10px;
     border-right: 1px solid #ffffff;
 
@@ -106,7 +106,7 @@
     }
 
     &__item {
-      height: 120px;
+      min-height: 120px;
 
       p {
         font-size: 17px;
